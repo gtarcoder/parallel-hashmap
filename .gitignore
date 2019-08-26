@@ -2,8 +2,7 @@ VagrantFile
 benchmark/build
 benchmark/output
 benchmark/charts.html
-build
-build_linux
+build*
 .vagrant
 **/.vscode
 TAGS
