@@ -440,7 +440,7 @@ public:
         file_size_ = st.st_size;
 
         addr_ = mmap(NULL, file_size_, PROT_READ|PROT_WRITE,
-            MAP_SHARED, fd, 0);
+            MAP_SHARED|MAP_LOCKED|MAP_POPULATE, fd, 0);
         if (addr_ == MAP_FAILED) {
             std::cerr << "Failed to mmap file " << file_path << std::endl;
             close(fd);
